@@ -121,44 +121,47 @@ def init_grid():
 
 def print_grid():
     os.system('clear')
-    print black+"+----+----+----+----+"
+    print black+"+-----+-----+-----+-----+"
     for i in xrange(4):
         print black+"|",
         for j in xrange(4):
             if grid[i][j]==0:
-                print black+"%*d"%(2,0),
+                print black+"%*d"%(3,0),
                 print black+"|",
             if grid[i][j]==2:
-                print blue+"%*d"%(2,2),
+                print blue+"%*d"%(3,2),
                 print black+"|",
             elif grid[i][j]==4:
-                print red+"%*d"%(2,4),
+                print red+"%*d"%(3,4),
                 print black+"|",
             elif grid[i][j]==8:
-                print green+"%*d"%(2,8),
+                print green+"%*d"%(3,8),
                 print black+"|",
             elif grid[i][j]==16:
-                print yellow+"%*d"%(2,16),
+                print yellow+"%*d"%(3,16),
                 print black+"|",
             elif grid[i][j]==32:
-                print cyan+"%*d"%(2,32),
+                print cyan+"%*d"%(3,32),
                 print black+"|",
             elif grid[i][j]==64:
-                print magenta+"%*d"%(2,64),
+                print magenta+"%*d"%(3,64),
                 print black+"|",
             elif grid[i][j]==128:
                 print blue+"%*d"%(2,128),
+                print black+"|",
+            elif grid[i][j]==256:
+                print blue+"%*d"%(2,256),
                 print black+"|",
             elif grid[i][j]==512:
                 print blue+"%*d"%(2,512),
                 print black+"|",
             elif grid[i][j]==1024:
-                print blue+"%*d"%(2,1024),
+                print blue+"%*d"%(1,1024),
                 print black+"|",
             elif grid[i][j]==2048:
-                print blue+"%*d"%(2,2048),
+                print blue+"%*d"%(1,2048),
                 print black+"|",
-        print black+"\n+----+----+----+----+\r"
+        print black+"\n+-----+-----+-----+-----+\r"
 
 def pick_random_tile():
     while True:
