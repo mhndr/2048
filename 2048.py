@@ -202,9 +202,9 @@ def start_game():
         move_done = move_tiles(user_move);
         # The following bit of obscure logic is to 
         # to fix the problem where adjacent nums of
-		# the same value weren't getting added. It
-		# needed an extra move from the user, therefore
-		# I'm making the code do it , instead of the user.
+        # the same value weren't getting added. It
+        # needed an extra move from the user, therefore
+        # I'm making the code do it , instead of the user.
         if move_done:
             move_done = move_tiles(user_move)
         print_grid()
